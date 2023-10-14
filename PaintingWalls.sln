@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintingWalls", "PaintingWalls.csproj", "{20723328-6ABD-4523-A7AC-D1C94789E19E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20723328-6ABD-4523-A7AC-D1C94789E19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20723328-6ABD-4523-A7AC-D1C94789E19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20723328-6ABD-4523-A7AC-D1C94789E19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20723328-6ABD-4523-A7AC-D1C94789E19E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59A223B6-A46C-4D66-BAD2-11953B42360F}
+	EndGlobalSection
+EndGlobal
