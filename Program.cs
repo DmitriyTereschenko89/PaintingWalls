@@ -4,30 +4,30 @@ Console.WriteLine(solution.PaintWalls(new int[] { 2, 3, 4, 2 }, new int[] { 1, 1
 
 public class Solution
 {
-	private int DFS(int[] dp, int[] cost, int[] time, int index, int remain)
+	private int DFS(int[,] dp, int[] cost, int[] time, int index, int remain, int n)
 	{
 		if (remain <= 0)
 		{
 			return 0;
 		}
-		if (index == cost.Length)
+		if (index == n)
 		{
 			return 1000000009;
 		}
-		if (dp[index] != -1)
+		if (dp[index, remain] != 0)
 		{
-			return dp[index];
+			return dp[index, remain];
 		}
-		int painted = cost[index] + DFS(dp, cost, time, index + 1, remain - time[index] - 1);
-		int notPainted = DFS(dp, cost, time, index + 1, remain);
-		dp[index] = Math.Min(painted, notPainted);
-		return dp[index];
+		int painted = cost[index] + DFS(dp, cost, time, index + 1, remain - 1 - time[index], n);
+		int notPainted = DFS(dp, cost, time, index + 1, remain, n);
+		dp[index, remain] = Math.Min(painted, notPainted);
+		return dp[index, remain];
 	}
 
 	public int PaintWalls(int[] cost, int[] time)
 	{
-		int[] dp = new int[cost.Length];
-		Array.Fill(dp, -1);
-		return DFS(dp, cost, time, 0, cost.Length);
+		int n = cost.Length;
+		int[,] dp = new int[n, n + 1];
+		return DFS(dp, cost, time, 0, n, n);
 	}
 }
